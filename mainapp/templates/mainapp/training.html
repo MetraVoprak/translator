@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'mainapp/base.html' %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Переводчик</title>
-    <link rel="stylesheet" type="text/css" href="static/style.css">
-</head>
-
-<body>
-    <div class="menu">
-        <div class="buttons">
-            <a class="button" href="index.html">Переводчик</a>
-            <a class="button" href="all_words.html">Все слова</a>
-            <a class="button" href="training.html">Тренировка</a>
-        </div>
+{% block menu %}
+<div class="menu">
+    <div class="buttons">
+        {% include 'mainapp/includes/inc_menu.html' %}
     </div>
-    <div class="search">
-        <button class="button">Начать тренировку</button>
-    </div>
+</div>
+{% endblock menu%}
 
-</body>
-
-</html>
+{% block content %}
+<div class="search">
+    <button class="button">Кнопка_5</button>
+</div>
+{% endblock content%}
