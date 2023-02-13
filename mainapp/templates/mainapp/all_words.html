@@ -1,39 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'mainapp/base.html' %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Все слова</title>
-    <link rel="stylesheet" type="text/css" href="static/style.css">
-</head>
+{% block header %}
+{% include 'mainapp/includes/inc_header.html' %}
+{% endblock header %}
 
-<body>
-    <div class="menu">
-        <div class="buttons">
-            <a class="button" href="index.html">Переводчик</a>
-            <a class="button" href="all_words.html">Все слова</a>
-            <a class="button" href="training.html">Тренировка</a>
-        </div>
-    </div>
 
+{% block content %}
+<div class="block_cont">
     <div class="all_words">
         <ol class="words">
-            <li>слово - перевод</li>
-            <li>слово - перевод</li>
-            <li>слово - перевод</li>
-            <li>слово - перевод</li>
-            <li>слово - перевод</li>
-            <li>слово - перевод</li>
-            <li>слово - перевод</li>
-            <li>слово - перевод</li>
-            <li>слово - перевод</li>
-            <li>слово - перевод</li>
+            {% for word in words %}
+            <li>{{ word.eng|capfirst }} - {{ word.rus|capfirst }}</li>
+            {% endfor %}
         </ol>
     </div>
+</div>
 
+{% endblock content%}
 
-</body>
+{% block footer %}
+{% include 'mainapp/includes/inc_footer.html' %}
+{% endblock footer %}
 
-</html>
+<!-- {% for word in words %}
+<li>{{ word.eng }} - {{ word.rus }}</li>
+{% endfor%} -->
