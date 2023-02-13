@@ -1,17 +1,17 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
 
-{% block menu %}
-<div class="menu">
-    <div class="buttons">
-        {% include 'mainapp/includes/inc_menu.html' %}
-    </div>
-</div>
-{% endblock menu %}
+{% block header %}
+{% include 'mainapp/includes/inc_header.html' %}
+{% endblock header %}
 
 {% block content %}
-<div class="search">
+<div class="widget">
     <input class="input" type="text">
-    <button class="button">Кнопка_4</button>
+    <a class="search_button" href="">Перевести</a>
 </div>
 {% endblock content %}
+
+{% block footer %}
+{% include 'mainapp/includes/inc_footer.html' %}
+{% endblock footer %}
