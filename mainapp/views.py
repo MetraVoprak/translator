@@ -11,20 +11,20 @@ def all_words(request):
     title = 'Все слова'
     words = [
         {
-            'eng':'hand', 
-            'rus':'рука'
+            'eng': 'hand',
+            'rus': 'рука'
         },
         {
-            'eng':'book', 
-            'rus':'книга'
+            'eng': 'book',
+            'rus': 'книга'
         },
         {
-            'eng':'run', 
-            'rus':'бежать'
+            'eng': 'run',
+            'rus': 'бежать'
         },
         {
-            'eng':'city', 
-            'rus':'город'
+            'eng': 'city',
+            'rus': 'город'
         }
     ]
     content = {"title": title, "words": words}
@@ -35,4 +35,4 @@ def all_words(request):
 def training(request):
     title = 'Тренировка'
     content = {"title": title}
-    return render(request, "mainapp/training.html", content) 
+    return render(request, "mainapp/training.html", content)
