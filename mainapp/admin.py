@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Part_of_speech, Words
+
+admin.site.register(Part_of_speech)
+admin.site.register(Words)
