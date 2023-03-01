@@ -11,7 +11,7 @@
     <div class="all_words">
         <ol class="words">
             {% for word in words %}
-            <li>{{ word.eng|capfirst }} - {{ word.rus|capfirst }}</li>
+            <li>{{ word.eng_var|capfirst }} - {{ word.rus_var|capfirst }}</li>
             {% endfor %}
         </ol>
     </div>

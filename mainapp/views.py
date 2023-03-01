@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Words, Part_of_speech
 
 
 def index(request):
@@ -9,24 +10,7 @@ def index(request):
 
 def all_words(request):
     title = 'Все слова'
-    words = [
-        {
-            'eng': 'hand',
-            'rus': 'рука'
-        },
-        {
-            'eng': 'book',
-            'rus': 'книга'
-        },
-        {
-            'eng': 'run',
-            'rus': 'бежать'
-        },
-        {
-            'eng': 'city',
-            'rus': 'город'
-        }
-    ]
+    words = Words.objects.all()
     content = {"title": title, "words": words}
     # content = {"title": title}
     return render(request, "mainapp/all_words.html", content)
