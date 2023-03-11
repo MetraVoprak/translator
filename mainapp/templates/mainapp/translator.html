@@ -1,0 +1,17 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block header %}
+{% include 'mainapp/includes/inc_header.html' %}
+{% endblock header %}
+
+{% block content %}
+<div class="widget">
+    <input class="input" type="text">
+    <a class="search_button" href="">Перевести</a>
+</div>
+{% endblock content %}
+
+{% block footer %}
+{% include 'mainapp/includes/inc_footer.html' %}
+{% endblock footer %}
