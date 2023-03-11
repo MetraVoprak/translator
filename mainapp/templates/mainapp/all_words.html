@@ -7,17 +7,17 @@
 
 
 {% block content %}
-<div class="block_cont">
-    <div class="all_words">
-        <ol class="words">
-            {% for word in words %}
-            <li>{{ word.eng_var|capfirst }} - {{ word.rus_var|capfirst }}</li>
-            {% endfor %}
-        </ol>
+<div class="all_words">
+
+    {% include "mainapp/includes/inc_categories_word.html"%}
+
+    <div class="list_words">
+        {% for word in words %}
+        <li><a href="">{{ word.eng_var|capfirst }} </a>- {{ word.rus_var|capfirst }}</li>
+        {% endfor %}
     </div>
 </div>
-
-{% endblock content%}
+{% endblock content %}
 
 {% block footer %}
 {% include 'mainapp/includes/inc_footer.html' %}
@@ -26,3 +26,13 @@
 <!-- {% for word in words %}
 <li>{{ word.eng }} - {{ word.rus }}</li>
 {% endfor%} -->
+
+<!-- <div class="block_cont">
+    <div class="all_words">
+        <ol class="words">
+            {% for word in words %}
+            <li><a href="">{{ word.eng_var|capfirst }} </a>- {{ word.rus_var|capfirst }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+</div> -->

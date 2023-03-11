@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Words, Part_of_speech
 
+# контроллеры
+
 
 def index(request):
     title = 'Переводчик'
@@ -8,11 +10,22 @@ def index(request):
     return render(request, "mainapp/index.html", content)
 
 
-def all_words(request):
+def translator(request):
+    title = 'Переводчик'
+    content = {"title": title}
+    return render(request, "mainapp/translator.html", content)
+
+
+def all_words(request, pk=None):
     title = 'Все слова'
     words = Words.objects.all()
-    content = {"title": title, "words": words}
-    # content = {"title": title}
+    cat_words = Part_of_speech.objects.all()
+    content = {"title": title, "words": words, "cat_words": cat_words}
+
+    # if pk:
+    #     print(f'User select word {pk}')
+
+    # # content = {"title": title}
     return render(request, "mainapp/all_words.html", content)
 
 

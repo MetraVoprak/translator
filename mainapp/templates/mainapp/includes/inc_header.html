@@ -1,18 +1,11 @@
-<!-- <a href="{% url 'main' %}"
-    class="{% if request.resolver_match.url_name == 'main' %}actbutton{% else %}button{% endif %}">Кнопка_1</a>
-<a href="{% url 'all_words' %}"
-    class="{% if request.resolver_match.url_name == 'all_words' %}actbutton{% else %}button{% endif %}">Кнопка_2</a>
-<a href=" {% url 'training' %}"
-    class="{% if request.resolver_match.url_name == 'training' %}actbutton{% else %}button{% endif %}">Кнопка_3</a> -->
-
 <div class="header">
     <div class="item_menu">
         <div class="logo">
-            <a class="logo_item" href="">ЛОГОТИП</a>
+            <a class="logo_item" href="{% url 'index' %}">КНОПКА_1</a>
         </div>
         <div class="buttons">
-            <a class="{% if request.resolver_match.url_name == 'main' %}actbutton{% else %}button{% endif %}"
-                href="{% url 'main' %}">Переводчик</a>
+            <a class="{% if request.resolver_match.url_name == 'translator' %}actbutton{% else %}button{% endif %}"
+                href="{% url 'translator' %}">Переводчик</a>
             <a class="{% if request.resolver_match.url_name == 'all_words' %}actbutton{% else %}button{% endif %}"
                 href="{% url 'all_words' %}">Все слова</a>
             <a class="{% if request.resolver_match.url_name == 'training' %}actbutton{% else %}button{% endif %}"
