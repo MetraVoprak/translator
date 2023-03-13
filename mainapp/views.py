@@ -22,10 +22,9 @@ def all_words(request, pk=None):
     cat_words = Part_of_speech.objects.all()
     content = {"title": title, "words": words, "cat_words": cat_words}
 
-    # if pk:
-    #     print(f'User select word {pk}')
-
-    # # content = {"title": title}
+    if pk:
+        print(f'User select word {pk}')
+    # content = {"title": title}
     return render(request, "mainapp/all_words.html", content)
 
 

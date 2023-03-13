@@ -25,16 +25,18 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", mainapp.index, name="index"),
     path('translator/', mainapp.translator, name='translator'),
-    path("all_words/", mainapp.all_words, name="all_words"),
-    # ---
-    path("all_words/verb", mainapp.all_words, name='verb'),
-    path("all_words/noun", mainapp.all_words, name='noun'),
-    path("all_words/adjective", mainapp.all_words, name='adjective'),
-    path("all_words/pronoun", mainapp.all_words, name='pronoun'),
-    path("all_words/numerals", mainapp.all_words, name='numerals'),
-    path("all_words/adverb", mainapp.all_words, name='adverb'),
-    # ---
+    path('all_words/', include("mainapp.urls", namespace="all_words")),
     path("training/", mainapp.training, name="training"),
+    # ---
+    # path("all_words/", mainapp.all_words, name="all_words"),
+    # path("all_words/verb", mainapp.all_words, name='verb'),
+    # path("all_words/noun", mainapp.all_words, name='noun'),
+    # path("all_words/adjective", mainapp.all_words, name='adjective'),
+    # path("all_words/pronoun", mainapp.all_words, name='pronoun'),
+    # path("all_words/numerals", mainapp.all_words, name='numerals'),
+    # path("all_words/adverb", mainapp.all_words, name='adverb'),
+    # path('all_words/new_cat', mainapp.all_words, name='new_cat'),
+    # ---
     # path('all_words/', include("mainapp.urls", namespace="all_words")),
 ]
 

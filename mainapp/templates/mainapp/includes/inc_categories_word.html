@@ -1,8 +1,8 @@
 <div class="cat_words">
-    <li><a class="{% if request.resolver_match.url_name == 'all_words' %}act_button_cat_words{% else %}button_cat_words{% endif %}"
-            href="{% url 'all_words' %}">All words</a></li>
-    {% for cat in cat_words %}
-    <li><a class="{% if request.resolver_match.url_name == cat.name|lower %}act_button_cat_words{% else %}button_cat_words{% endif %}"
-            href="{% url cat.name|lower %}">{{ cat.name }}</a></li>
-    {% endfor%}
+        <li><a class="{% if request.resolver_match.url_name == 'all_words' %}act_button_cat_words{% else %}button_cat_words{% endif %}"
+                        href="{% url 'all_words:all_words' %}">All words</a></li>
+        {% for cat in cat_words %}
+        <li><a class="{% if request.resolver_match.url_name == cat.name|lower %}act_button_cat_words{% else %}button_cat_words{% endif %}"
+                        href="{% url 'all_words:categories' cat.pk %}">{{ cat.name }}</a></li>
+        {% endfor%}
 </div>
