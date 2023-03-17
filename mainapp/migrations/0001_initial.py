@@ -4,19 +4,17 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Words',
+            name="Words",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('eng_var', models.CharField(max_length=64, unique=True, verbose_name='на английском')),
-                ('rus_var', models.CharField(max_length=64, unique=True, verbose_name='на русском')),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("eng_var", models.CharField(max_length=64, unique=True, verbose_name="на английском")),
+                ("rus_var", models.CharField(max_length=64, unique=True, verbose_name="на русском")),
             ],
         ),
     ]
