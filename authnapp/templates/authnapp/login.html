@@ -1,0 +1,15 @@
+{% extends 'authnapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="auth">
+    <form class="form-horizontal" action="{% url 'auth:login' %}" method="post">
+
+        {% csrf_token %}
+        {{ login_form.as_p }}
+
+        <input class="inpur_auth" type="submit" value="войти">
+    </form>
+</div>
+
+{% endblock content %}

@@ -27,6 +27,7 @@ urlpatterns = [
     path("translator/", mainapp.translator, name="translator"),
     path("all_words/", include("mainapp.urls", namespace="all_words")),
     path("training/", mainapp.training, name="training"),
+    path("auth", include("authnapp.urls", namespace="auth")),
     # ---
     # path("all_words/", mainapp.all_words, name="all_words"),
     # path("all_words/verb", mainapp.all_words, name='verb'),
@@ -41,4 +42,5 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
