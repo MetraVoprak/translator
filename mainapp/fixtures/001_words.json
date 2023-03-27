@@ -1,0 +1,92 @@
+[
+    {
+        "model": "mainapp.words",
+        "pk": 1,
+        "fields": {
+            "category": 1,
+            "eng_var": "be",
+            "rus_var": "быть"
+        }
+    },
+    {
+        "model": "mainapp.words",
+        "pk": 2,
+        "fields": {
+            "category": 1,
+            "eng_var": "adide",
+            "rus_var": "обитать"
+        }
+    },
+    {
+        "model": "mainapp.words",
+        "pk": 3,
+        "fields": {
+            "category": 3,
+            "eng_var": "red",
+            "rus_var": "красный"
+        }
+    },
+    {
+        "model": "mainapp.words",
+        "pk": 4,
+        "fields": {
+            "category": 3,
+            "eng_var": "befall",
+            "rus_var": "случаться"
+        }
+    },
+    {
+        "model": "mainapp.words",
+        "pk": 5,
+        "fields": {
+            "category": 5,
+            "eng_var": "one",
+            "rus_var": "один"
+        }
+    },
+    {
+        "model": "mainapp.words",
+        "pk": 6,
+        "fields": {
+            "category": 4,
+            "eng_var": "she",
+            "rus_var": "она"
+        }
+    },
+    {
+        "model": "mainapp.words",
+        "pk": 7,
+        "fields": {
+            "category": 5,
+            "eng_var": "two",
+            "rus_var": "два"
+        }
+    },
+    {
+        "model": "mainapp.words",
+        "pk": 8,
+        "fields": {
+            "category": 6,
+            "eng_var": "bleed",
+            "rus_var": "кровоточить"
+        }
+    },
+    {
+        "model": "mainapp.words",
+        "pk": 9,
+        "fields": {
+            "category": 8,
+            "eng_var": "blue",
+            "rus_var": "синий"
+        }
+    },
+    {
+        "model": "mainapp.words",
+        "pk": 10,
+        "fields": {
+            "category": 3,
+            "eng_var": "put",
+            "rus_var": "класть"
+        }
+    }
+]

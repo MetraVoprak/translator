@@ -1,0 +1,15 @@
+{% extends 'authnapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="inpur_windows">
+    <form class="form-horizontal" action="{% url 'auth:login' %}" method="post">
+        {% csrf_token %}
+        {{ login_form.as_p }}
+        <br>
+        <input class="window-buttons" type="submit" value="Войти">
+    </form>
+    <a href="{% url 'auth:register' %}" class="window-buttons">Зарегистрироваться</a>
+    <a href="{% url 'index' %}" class="window-buttons">На главную</a>
+</div>
+{% endblock content %}
