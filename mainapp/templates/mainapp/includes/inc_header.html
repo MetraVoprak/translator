@@ -6,7 +6,7 @@
         <div class="buttons">
             <a class="{% if request.resolver_match.url_name == 'translator' %}actbutton{% else %}button{% endif %}"
                 href="{% url 'translator' %}">Переводчик</a>
-            <a class="{% if request.resolver_match.url_name == 'all_words' %}actbutton{% else %}button{% endif %}"
+            <a class="{% if request.resolver_match.namespace == 'all_words' %}actbutton{% else %}button{% endif %}"
                 href="{% url 'all_words:all_words' %}">Все слова</a>
             <a class="{% if request.resolver_match.url_name == 'training' %}actbutton{% else %}button{% endif %}"
                 href="{% url 'training' %}">Тренировка</a>

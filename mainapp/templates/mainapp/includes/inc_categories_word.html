@@ -1,8 +1,14 @@
 <div class="cat_words">
-        <li><a class="{% if request.resolver_match.url_name == 'all_words' %}act_button_cat_words{% else %}button_cat_words{% endif %}"
-                        href="{% url 'all_words:all_words' %}">All words</a></li>
-        {% for cat in cat_words %}
-        <li><a class="{% if request.resolver_match.url_name == cat.name|lower %}act_button_cat_words{% else %}button_cat_words{% endif %}"
-                        href="{% url 'all_words:categories' cat.pk %}">{{ cat.name }}</a></li>
+        <li>
+                <a class="{% if request.resolver_match.kwargs.pk == 0  %}act_button_cat_words{% else %}button_cat_words{% endif %}"
+                        href="{% url 'all_words:categories' pk=0 %}">All words
+                </a>
+        </li>
+        {% for link in links_menu %}
+        <li>
+                <a class="{% if request.resolver_match.kwargs.pk == link.pk %}act_button_cat_words{% else %}button_cat_words{% endif %}"
+                        href="{% url 'all_words:categories' link.pk %}">{{ link.name }}
+                </a>
+        </li>
         {% endfor%}
 </div>
