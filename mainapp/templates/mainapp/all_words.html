@@ -7,16 +7,19 @@
 
 
 {% block content %}
-<div class="all_words">
+<div class="general-all-worlds">
+    <div class="all_words">
+        {% include "mainapp/includes/inc_categories_word.html"%}
 
-    {% include "mainapp/includes/inc_categories_word.html"%}
-
-    <div class="list_words">
-        {% for word in words %}
-        <li><a href="">{{ word.eng_var|capfirst }} </a>- {{ word.rus_var|capfirst }}</li>
-        {% endfor %}
+        <div class="list_words">
+            {% for word in words %}
+            <li><a href="">{{ word.eng_var|capfirst }} </a>- {{ word.rus_var|capfirst }}</li>
+            {% endfor %}
+        </div>
     </div>
+    {% include "mainapp/includes/inc_crud_word.html"%}
 </div>
+
 {% endblock content %}
 
 {% block footer %}

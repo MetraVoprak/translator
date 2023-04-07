@@ -52,3 +52,15 @@ def training(request):
     title = "Тренировка"
     content = {"title": title}
     return render(request, "mainapp/training.html", content)
+
+
+def addword(request):
+    title = "Добавление"
+    content = {"title": title}
+    return render(request, "mainapp/add_word.html", content)
+
+
+def updword(request):
+    title = "Изменение"
+    content = {"title": title}
+    return render(request, "mainapp/upd_word.html", content)

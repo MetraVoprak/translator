@@ -7,7 +7,7 @@
         {% for link in links_menu %}
         <li>
                 <a class="{% if request.resolver_match.kwargs.pk == link.pk %}act_button_cat_words{% else %}button_cat_words{% endif %}"
-                        href="{% url 'all_words:categories' link.pk %}">{{ link.name }}
+                        href="{% url 'all_words:categories' link.pk %}">{{ link.name|capfirst }}
                 </a>
         </li>
         {% endfor%}

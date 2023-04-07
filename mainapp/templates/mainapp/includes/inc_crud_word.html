@@ -1,0 +1,6 @@
+<div class="cdud-words">
+    {% if user.is_authenticated %}
+    <a class="button_cat_words" href="{% url 'all_words:addword' %}">Добавить</a>
+    <a class="button_cat_words" href="{% url 'all_words:updword' %}">Изменить</a>
+    {% endif %}
+</div>
