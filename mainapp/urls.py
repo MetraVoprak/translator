@@ -6,6 +6,7 @@ app_name = "mainapp"
 
 urlpatterns = [
     path("", mainapp.all_words, name="all_words"),
-    # тут надо сделать доп страницу на каждое слово
-    path("<int:pk>/", mainapp.all_words, name="categories"),
+    path("add_new_word/", mainapp.addword, name="addword"),
+    path("upd_word/", mainapp.updword, name="updword"),
+    path("category/<int:pk>/", mainapp.all_words, name="categories"),
 ]
